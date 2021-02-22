@@ -51,15 +51,21 @@
       const urlParams = new URLSearchParams(window.location.search);
       const csvURL = urlParams.get('url');
       if (!csvURL) {
-        document.getElementById("table-container").innerHTML = "Specify your CSV's URL like this: " + window.location.href + "/?url=<i>CSV_LINK</i>";
+        document.getElementById("table-container").innerHTML = "Specify your CSV's URL like this: " + window.location.href.replace(/\/$/, "") + "?url=<i>CSV_LINK</i>";
       } else {
-        CsvToHtmlTable.init({
-          csv_path: csvURL,
-          element: 'table-container', 
-          allow_download: true,
-          csv_options: {separator: ',', delimiter: '"'},
-          datatables_options: {"paging": false, "bSort" : false}
-        });
+        try {
+          CsvToHtmlTable.init({
+            csv_path: csvURL,
+            element: 'table-container', 
+            allow_download: true,
+            csv_options: {separator: ',', delimiter: '"'},
+            datatables_options: {"paging": false, "bSort" : false}
+          });
+        }
+        catch(err) {
+          document.getElementById("table-container").innerHTML = err.toString();
+          throw err;
+        }
         // Set page title
         var documentTitle = csvURL.split("/").pop().replaceAll(/.csv$/g, "");
         document.getElementById("page-title").innerHTML = documentTitle;
