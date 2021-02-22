@@ -1,3 +1,24 @@
+# Render CSV as HTML Table from URL
+
+## Usage
+
+Embed your URL like this:
+```
+https://narvidhai.github.io/Render-CSV-from-URL-to-HTML-Table?url=CSV_LINK
+```
+
+Example:  
+https://narvidhai.github.io/Render-CSV-from-URL-to-HTML-Table?url=https://raw.githubusercontent.com/datapackage-examples/sample-csv/master/sample.csv
+
+## Limitations
+
+- Supports CSV only from websites like GitHub Raw which has CORS-enabled.
+  - So if the page is blank, it means URL couldn't be fetched because of the CORS issue.
+
+---
+
+(Original README)
+
 # CSV to HTML Table
 
 Display any CSV file as a searchable, filterable, pretty HTML table. Done in 100% JavaScript.
