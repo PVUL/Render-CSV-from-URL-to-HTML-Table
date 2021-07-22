@@ -68,7 +68,9 @@
           '<br><br>' +
           "Specify your CSV's URL like this: " +
           window.location.href.replace(/\/$/, '') +
-          '/?url=<i>CSV_LINK</i>';
+          '/?url=<i>CSV_LINK</i>' +
+          '<br><br>' +
+          '<i>Note: for csv files in private repos, must include the token parameter in URL</i>';
       } else {
         try {
           CsvToHtmlTable.init({
