@@ -17,7 +17,7 @@ https://pvul.github.io/webcsv?url=CSV_LINK
 ```
 
 Example:
-https://pvul.github.io/webcsv?url=https://raw.githubusercontent.com/datapackage-examples/sample-csv/master/sample.csv
+https://pvul.github.io/webcsv?url=https://raw.githubusercontent.com/PVUL/webcsv/main/data/test.csv
 
 ## Limitations
 
