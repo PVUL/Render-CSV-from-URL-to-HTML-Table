@@ -19,6 +19,8 @@ https://pvul.github.io/webcsv?url=CSV_LINK
 Example:
 https://pvul.github.io/webcsv?url=https://raw.githubusercontent.com/PVUL/webcsv/main/data/test.csv
 
+For CSV files in private repos, must include `token` URL param for `CSV_LINK`
+
 ## Limitations
 
 - Supports CSV only from websites like GitHub Raw which has CORS-enabled.
